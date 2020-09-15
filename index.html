@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Видеосервис</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  </head>
+  <body>
+    <header>
+      <img src="img/logo.png" width="182" height="36">
+      <input type="search" name="search" placeholder="Поиск...">
+      <input type="submit" value="Найти">
+      <button onclick="show('block')" type="text">Войти</button>
+      <div id="exit"><button type="text">Выйти</button></div>
+    </header>
+    <main>
+      <div class="tabs_container">
+        <input class="hide" type="radio" checked name="tabs" id="tab1">
+        <label for="tab1" tabindex="0">Фильмы</label>
+        <div class="tab_content" id="tab_content_1">
+          <div id="movies">
+            <div id="new">
+              <img src="img/fire.png" width="26" height="25"><h1>Новинки</h1>
+              <div id="cat">
+                <img src="img/Cat.png" width="278" height="369">
+                <p>Мульт в кино. Выпуск №103. Некогда грустить!</p>
+              </div>
+              <div id="batman">
+                <img src="img/Batman.png" width="278" height="369">
+                <p>Новый Бэтмен</p>
+              </div>
+              <div id="hollywood">
+                <div id="background">
+                  <img src="img/Hollywood.png" width="278" height="369">
+                </div>
+                <p>Однажды... в Голливуде</p>
+                <div id="text">
+                  <p>Фильм повествует о череде событий, произошедших в Голливуде в 1969 году, на закате его «золотого века». Известный актер Рик Далтон и его дублер Клифф Бут пытаются найти свое место в стремительно меняющемся мире киноиндустрии.</p>
+                </div>
+              </div>
+              <div id="girl">
+                <img src="img/Girl.png" width="278" height="369">
+                <p>Стриптизерши</p>
+              </div>
+            </div>
+            <div id="genre">
+              <h1>Жанры</h1>
+                <div class="rectangle">
+                  <div id="comedy">
+                    <img src="img/comedy_pic.png" width="48" height="48">
+                    <p>Комедии</p>
+                  </div>
+                  <div id="drama">
+                    <img src="img/drama_pic.png" width="48" height="48">
+                    <p>Драмы</p>
+                  </div>
+                  <div id="fantasy">
+                    <img src="img/fantasy_pic.png" width="48" height="48">
+                    <p>Фантастика</p>
+                  </div>
+                  <div id="horror">
+                    <img src="img/horror_pic.png" width="48" height="48">
+                    <p>Ужасы</p>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+        <input class="hide" type="radio" name="tabs" id="tab2">
+        <label for="tab2" tabindex="0">Телеканалы</label>
+        <div class="tab_content" id="tab_content_2">
+          <div id="channels">
+            <div class="TV" id="TV1">
+              <img src="img/TV1.png" width="49" height="64">
+              <h2>Первый канал</h2>
+              <p>
+                <span class="red">13:00 &nbsp;&nbsp;&nbsp;&nbsp;Новости (с субтитрами)</span><br>
+                14:00 &nbsp;&nbsp;&nbsp;&nbsp;Давай поженимся<br>
+                15:00 &nbsp;&nbsp;&nbsp;&nbsp;Другие новости
+              </p>
+            </div>
+            <div class="TV" id="TV2x2">
+              <img src="img/TV2x2.png" width="114" height="49">
+              <h2>2x2</h2>
+              <p>
+                <span class="red">13:00 &nbsp;&nbsp;&nbsp;&nbsp;МУЛЬТ ТВ. Сезон 4, 7 серия</span><br>
+                14:00 &nbsp;&nbsp;&nbsp;&nbsp;ПОДОЗРИТЕЛЬНАЯ СОВА. Сезон 7, 7 серия<br>
+                15:00 &nbsp;&nbsp;&nbsp;&nbsp;БУРДАШЕВ. Сезон 1, 20 серия
+              </p>
+            </div>
+            <div class="TV" id="TVRBK">
+              <img src="img/TVrbc.png" width="52" height="52">
+              <h2>РБК</h2>
+              <p>
+                <span class="red">13:00 &nbsp;&nbsp;&nbsp;&nbsp;ДЕНЬ. Горючая смесь: как бороться с суррогатом на АЗС</span><br>
+                14:00 &nbsp;&nbsp;&nbsp;&nbsp;ДЕНЬ. Главные темы<br>
+                15:00 &nbsp;&nbsp;&nbsp;&nbsp;Главные новости
+              </p>
+            </div>
+            <div class="TV" id="TVAMEDIA">
+              <img src="img/TVamedia.png" width="64" height="64">
+              <h2>AMEDIA PREMIUM</h2>
+              <p>
+                <span class="red">13:00 &nbsp;&nbsp;&nbsp;&nbsp;Клиент всегда мертв</span><br>
+                14:00 &nbsp;&nbsp;&nbsp;&nbsp;Голодные игры: Сойка-пересмешница. Часть I<br>
+                15:00 &nbsp;&nbsp;&nbsp;&nbsp;Секс в большом городе
+              </p>
+            </div>
+            <div class="TV" id="TVAP">
+              <img src="img/TVAP.png" width="79" height="52">
+              <h2>Animal Planet</h2>
+              <p>
+                <span class="red">13:00 &nbsp;&nbsp;&nbsp;&nbsp;Слоны: история большого похода</span><br>
+                14:00 &nbsp;&nbsp;&nbsp;&nbsp;Большие кошки<br>
+                15:00 &nbsp;&nbsp;&nbsp;&nbsp;Дикая Аляска
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div onclick="show('none')" id="gray"></div>
+      <div id="window">
+        <div class="form">
+          <h1>Вход</h1>
+          <form method="post">
+            <input type="text" name="login" placeholder="Логин">
+            <br>
+            <br>
+            <input type="password" name="password" placeholder="Пароль">
+            <br>
+            <input type="checkbox" name="remember">
+            <label for="remember">Запомнить</label>
+            <br>
+            <input type="submit" value="Войти">
+          </form>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <img src="img/HtcLogo.png" width="31.99" height="64">
+      <p>
+        426057, Россия, Удмуртская Республика, г. Ижевск, ул. Карла Маркса, 246 (ДК «Металлург»)
+        <br>
+        +7 (3412) 93-88-61, 43-29-29
+        <br>
+        <a href="https://htc-cs.ru/">htc-cs.ru</a>
+      </p>
+    </footer>
+    <script src="javascript.js"></script>
+  </body>
+</html>
