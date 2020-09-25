@@ -17,7 +17,8 @@ header {
 
 input[type=search],
 input[type=submit],
-button[type=text] {
+button[type=text],
+button[type=button] {
   border: none;
   font-size: 16px;
   font-family: "Rubik";
@@ -53,14 +54,22 @@ button[type=text] {
   margin-top: 5px;
 }
 
-header #exit {
-  display:none;
-}
-
-#exit button[type=text] {
+button[type=button] {
+  display: none;
   background-color: #FFFFFF;
   color: #E5261E;
   margin-left: -83px;
+  cursor: pointer;
+  font-weight: 700;
+  margin-left: 325px;
+  margin-top: 5px;
+}
+
+#clientLogin {
+  display: none;
+  font-family: "Rubik";
+  color: #333333;
+  font-size: 16px;
 }
 
 /**Блок form*/
@@ -130,7 +139,7 @@ header #exit {
   margin-top: 30px;
 }
 
-.form input[type=submit] {
+.form #submit {
   font-weight: 500;
   color: #FFFFFF;;
   background-color: #E5261E;
