@@ -29,7 +29,7 @@ function show(state)
 	}
 
 
-function store() {
+function reg() {
 		var login = document.getElementById('login');
 		var password = document.getElementById('password');
 
