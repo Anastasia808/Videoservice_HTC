@@ -61,8 +61,7 @@ button[type=button] {
   margin-left: -83px;
   cursor: pointer;
   font-weight: 700;
-  margin-left: 325px;
-  margin-top: 5px;
+  margin-top: 4px;
 }
 
 #clientLogin {
@@ -70,6 +69,13 @@ button[type=button] {
   font-family: "Rubik";
   color: #333333;
   font-size: 16px;
+  font-weight: 700;
+  margin-left: 164px;
+  margin-top: 4px;
+  margin-right: 95px;
+  text-align: right;
+  width: 150px;
+  cursor: default;
 }
 
 /**Блок form*/

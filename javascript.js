@@ -1,12 +1,15 @@
-	display = document.getElementById('exit').style.display;
-
 	if (localStorage.getItem('login') != null) {
 		document.getElementById('exit').style.display='block';
+		document.getElementById('clientLogin').style.display='block';
 		document.getElementById('entry').style.display = 'none';
 	} else {
 		document.getElementById('exit').style.display='none';
+		document.getElementById('clientLogin').style.display='none';
 		document.getElementById('entry').style.display = 'block';
 	}
+
+
+	document.getElementById('clientLogin').innerHTML = localStorage.getItem('login');
 
 
 	function exit() {
@@ -14,6 +17,7 @@
 		localStorage.removeItem('password');
 
 		document.getElementById('exit').style.display='none';
+		document.getElementById('clientLogin').style.display='none';
 		document.getElementById('entry').style.display = 'block';
 	}
 
