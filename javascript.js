@@ -1,25 +1,39 @@
-	if (localStorage.getItem('login') != null) {
-		document.getElementById('exit').style.display='block';
-		document.getElementById('clientLogin').style.display='block';
-		document.getElementById('entry').style.display = 'none';
+const LOGIN_KEY = document.getElementById('login');
+const PASSWORD = document.getElementById('password');
+
+
+if (localStorage.getItem('LOGIN_KEY') != null) {
+	document.getElementById('exit').style.display='block';
+	document.getElementById('clientLogin').style.display='block';
+	document.getElementById('entry').style.display = 'none';
+} else {
+	document.getElementById('exit').style.display='none';
+	document.getElementById('clientLogin').style.display='none';
+	document.getElementById('entry').style.display = 'block';
+	}
+
+
+document.getElementById('clientLogin').innerHTML = localStorage.getItem('LOGIN_KEY');
+
+function change() {
+	var newlogin = document.getElementById('clientLogin');
+
+	if (newlogin.value == '') {
+		alert('Заполните поле');
 	} else {
-		document.getElementById('exit').style.display='none';
-		document.getElementById('clientLogin').style.display='none';
-		document.getElementById('entry').style.display = 'block';
+			localStorage.setItem('LOGIN_KEY', newlogin.value);
 	}
+}
 
 
-	document.getElementById('clientLogin').innerHTML = localStorage.getItem('login');
+function exit() {
+	localStorage.removeItem('LOGIN_KEY');
+	localStorage.removeItem('PASSWORD');
 
-
-	function exit() {
-		localStorage.removeItem('login');
-		localStorage.removeItem('password');
-
-		document.getElementById('exit').style.display='none';
-		document.getElementById('clientLogin').style.display='none';
-		document.getElementById('entry').style.display = 'block';
-	}
+	document.getElementById('exit').style.display='none';
+	document.getElementById('clientLogin').style.display='none';
+	document.getElementById('entry').style.display = 'block';
+}
 
 
 function show(state)
@@ -30,9 +44,6 @@ function show(state)
 
 
 function reg() {
-		var login = document.getElementById('login');
-		var password = document.getElementById('password');
-
-    localStorage.setItem('login', login.value);
-    localStorage.setItem('password', password.value);
+  localStorage.setItem('LOGIN_KEY', login.value);
+  localStorage.setItem('PASSWORD', password.value);
 }

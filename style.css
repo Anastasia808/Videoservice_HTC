@@ -1,18 +1,16 @@
 body {
-  margin: 0px;
+  margin:0 auto;
   width: 1440px;
   height: 1144px;
 }
 
 /**Блок header*/
 header {
-  width: 100%;
-  margin: 0 auto;
   display: flex;
   height: 40px;
   align-items: center;
-  margin-left: 131px;
-  margin-top: 30px;
+  margin-left: 129px;
+  margin-top: 31px;
 }
 
 input[type=search],
@@ -75,7 +73,8 @@ button[type=button] {
   margin-right: 95px;
   text-align: right;
   width: 150px;
-  cursor: default;
+  border: none;
+  resize: none;
 }
 
 /**Блок form*/
@@ -184,6 +183,13 @@ button[type=button] {
   overflow: hidden;
 }
 
+.hide:checked + label {
+  background-color: inherit;
+  color: #E5261E;
+  outline: none;
+  border-bottom: 2px solid #E5261E;
+}
+
 .hide + label:hover {
   background-color: inherit;
   border-bottom: 2px solid #E5261E;
@@ -236,7 +242,7 @@ button[type=button] {
 /**new*/
 #movies #new {
   display: flex;
-  margin-top: 36px;
+  margin-top: 34px;
   margin-left: 130px;
 }
 
@@ -368,7 +374,7 @@ button[type=button] {
 #channels {
   margin: 0 auto;
   display: flex;
-  margin-top: 35px;
+  margin-top: 32px;
   margin-left: 125px;
   width: 1197px;
   height: 696px;
