@@ -1,8 +1,8 @@
-const LOGIN_KEY = document.getElementById('login');
-const PASSWORD = document.getElementById('password');
+const LOGIN_KEY = 'login';
+const PASSWORD = 'password';
 
 
-if (localStorage.getItem('LOGIN_KEY') != null) {
+if (localStorage.getItem(LOGIN_KEY) != null) {
 	document.getElementById('exit').style.display='block';
 	document.getElementById('clientLogin').style.display='block';
 	document.getElementById('entry').style.display = 'none';
@@ -13,7 +13,7 @@ if (localStorage.getItem('LOGIN_KEY') != null) {
 	}
 
 
-document.getElementById('clientLogin').innerHTML = localStorage.getItem('LOGIN_KEY');
+document.getElementById('clientLogin').innerHTML = localStorage.getItem(LOGIN_KEY);
 
 function change() {
 	var newlogin = document.getElementById('clientLogin');
@@ -21,14 +21,14 @@ function change() {
 	if (newlogin.value == '') {
 		alert('Заполните поле');
 	} else {
-			localStorage.setItem('LOGIN_KEY', newlogin.value);
+			localStorage.setItem(LOGIN_KEY, newlogin.value);
 	}
 }
 
 
 function exit() {
-	localStorage.removeItem('LOGIN_KEY');
-	localStorage.removeItem('PASSWORD');
+	localStorage.removeItem(LOGIN_KEY);
+	localStorage.removeItem(PASSWORD);
 
 	document.getElementById('exit').style.display='none';
 	document.getElementById('clientLogin').style.display='none';
@@ -44,6 +44,6 @@ function show(state)
 
 
 function reg() {
-  localStorage.setItem('LOGIN_KEY', login.value);
-  localStorage.setItem('PASSWORD', password.value);
+  localStorage.setItem(LOGIN_KEY, login.value);
+  localStorage.setItem(PASSWORD, password.value);
 }
